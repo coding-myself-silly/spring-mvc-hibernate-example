@@ -1,0 +1,12 @@
+create database autos;
+
+
+CREATE TABLE `automobile` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `country_of_origin`varchar(255) NOT NULL,  
+  `year` int(4) not null,
+  PRIMARY KEY (`id`)
+) ;
+
