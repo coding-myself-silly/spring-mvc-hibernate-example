@@ -16,12 +16,8 @@ public class AutomobileDaoImpl extends AbstractDao<Integer, Automobile> implemen
 		return getByKey(id);
 	}
 
-	public void saveAutomobile(Automobile automobile) {
-		persist(automobile);
-	}
-	
-	public void update(Automobile automobile){
-		super.update(automobile);
+	public void saveOrUpdate(Automobile automobile){
+		super.saveOrUpdate(automobile);
 	}
 	
 	public void deleteAutomobileById(Integer id) {

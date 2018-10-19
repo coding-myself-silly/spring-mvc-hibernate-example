@@ -21,19 +21,11 @@ public class AutomobileServiceImpl implements AutomobileService {
 	}
 
 	public void saveAutomobile(Automobile automobile) {
-		dao.saveAutomobile(automobile);
+		dao.saveOrUpdate(automobile);
 	}
 	
 	public void updateAutomobile(Automobile automobile) {
-		/*Automobile entity = dao.findById(automobile.getId());
-		if(entity!=null){
-			entity.setName(automobile.getName());
-			entity.setModel(automobile.getModel());
-			entity.setCountryOfOrigin(automobile.getCountryOfOrigin());
-			entity.setYear(automobile.getYear());
-			dao.save(automobile);
-		}*/
-	    dao.update(automobile);
+		dao.saveOrUpdate(automobile);
 	}
 
 	public void deleteAutomobileById(Integer id) {

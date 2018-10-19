@@ -29,14 +29,9 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 	public T getByKey(PK key) {
 		return (T) getSession().get(persistentClass, key);
 	}
-
-	public void persist(T entity) {
-	    System.out.println(" persist " + entity);
-		getSession().persist(entity);
-	}
 	
-	public void update(T entity) {
-	    getSession().update(entity);
+	public void saveOrUpdate(T entity) {
+	    getSession().saveOrUpdate(entity);
 	}	
 
 	public void delete(T entity) {

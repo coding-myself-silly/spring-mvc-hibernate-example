@@ -7,10 +7,8 @@ import stan.org.springmvc.model.Automobile;
 public interface AutomobileDao {
 
 	Automobile findById(Integer id);
-
-	void saveAutomobile(Automobile automobile);
 	
-	public void update(Automobile automobile);
+	public void saveOrUpdate(Automobile automobile);
 	
 	void deleteAutomobileById(Integer id);
 	
